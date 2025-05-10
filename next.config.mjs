@@ -2,7 +2,7 @@
 
 const isProd = process.env.NODE_ENV === "production";
 
-const repoName = "reeds-shepp-rust";
+const repoName = "reeds-shepp";
 
 const nextConfig = {
   reactStrictMode: true,
