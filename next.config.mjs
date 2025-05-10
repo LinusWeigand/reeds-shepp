@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === "production";
+
+const repoName = "reeds-shepp-rust";
+
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -10,6 +15,12 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
 
-export default nextConfig
+  output: "export",
+
+  basePath: isProd ? `/${repoName}` : "",
+
+  assetPrefix: isProd ? `/${repoName}/` : "",
+};
+
+export default nextConfig;
