@@ -18,9 +18,8 @@ const nextConfig = {
 
   output: "export",
 
-  basePath: isProd ? `/${repoName}` : "",
-
-  assetPrefix: isProd ? `/${repoName}/` : "",
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
 };
 
 export default nextConfig;

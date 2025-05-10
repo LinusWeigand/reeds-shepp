@@ -94,7 +94,8 @@ export default function Home() {
           <div className="mx-auto mt-8 grid justify-center gap-4 sm:grid-cols-1 md:max-w-[64rem] md:grid-cols-1">
             <div className="relative overflow-hidden rounded-lg border">
               <video className="w-full aspect-video" autoPlay muted loop playsInline>
-                <source src="/demo.mp4" type="video/mp4" />
+                <source src={`${basePath}/demo.mp4`} type="video/mp4" />
+
                 Your browser does not support the video tag.
               </video>
               <div className="p-6 border-t">
