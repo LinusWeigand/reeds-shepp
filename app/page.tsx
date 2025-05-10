@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge"
 import HeroBackground from "@/components/hero-background"
 
 export default function Home() {
+
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/reeds-shepp";
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -94,7 +96,7 @@ export default function Home() {
           <div className="mx-auto mt-8 grid justify-center gap-4 sm:grid-cols-1 md:max-w-[64rem] md:grid-cols-1">
             <div className="relative overflow-hidden rounded-lg border">
               <video className="w-full aspect-video" autoPlay muted loop playsInline>
-                <source src="/demo.mp4" type="video/mp4" />
+                <source src={`${basePath}/demo.mp4`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="p-6 border-t">
@@ -291,7 +293,7 @@ fn main() {
                 <div className="md:shrink-0 flex justify-center md:justify-start pt-6 md:pt-0">
                   <img
                     className="h-48 w-48 rounded-full object-cover md:h-full md:w-48 md:rounded-none"
-                    src="/linus_weigand.avif"
+                    src={`${basePath}/linus_weigand.avif`}
                     alt="Linus Weigand"
                   />
                 </div>
